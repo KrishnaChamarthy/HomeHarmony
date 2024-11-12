@@ -1,5 +1,8 @@
 import React from 'react'
 import Navbar from './components/Navbar'
+import Hero from './components/Hero'
+import Features from './components/Features'
+import FeaturesAlt from './components/FeaturesAlt'
 
 const App = () => {
   return (
@@ -9,6 +12,9 @@ const App = () => {
       </div>
       <div className="container mx-auto px-8">
         <Navbar />
+        <Hero />
+        {/* <Features /> */}
+        <FeaturesAlt />
       </div>
     </div>
   )
