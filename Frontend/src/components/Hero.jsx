@@ -1,6 +1,5 @@
 import React from "react";
 import hero from "../assets/outputrender.png";
-import hero2 from "../assets/pngegg.png";
 import { Link } from "react-router-dom";
 
 const Hero = () => {
@@ -27,7 +26,7 @@ const Hero = () => {
             <div className="mt-12 text-4xl flex items-center justify-center gap-8">
               <Link
                 to="/upload"
-                className="bg-[#0077FF] rounded-xl py-3 px-6 text[#DADADA] text-xl cursor-pointer text-center"
+                className="bg-gradient-to-br from-[#9579e1] via-[#4065fe] to-[#22caff] rounded-xl py-3 px-6 text[#DADADA] text-xl cursor-pointer text-center"
               >
                 Start Your Journey
               </Link>

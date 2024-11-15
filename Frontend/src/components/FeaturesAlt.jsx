@@ -20,7 +20,8 @@ const FeaturesAlt = () => {
                 <img
                   src={feature.image}
                   alt={feature.title}
-                  className="mb-6 rounded-xl hover:scale-105 transition-transform duration-300 ease-in-out"
+                  
+                  className="mb-6 rounded-xl hover:scale-105 transition-transform duration-300 ease-in-out "
                 />
              
             </div>
