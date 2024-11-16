@@ -4,12 +4,12 @@ import { Link, useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const navigate = useNavigate();  // Use the useNavigate hook for navigation
-  
+  const navigate = useNavigate();
+
   const toggleMenu = (path) => {
     setIsOpen((prev) => !prev);
     if (path !== "") {
-      navigate(`/${path}`);  // Use navigate to redirect
+      navigate(`/${path}`);
     }
   };
 
@@ -20,7 +20,12 @@ const Navbar = () => {
         <p className="font-semibold mx-3 text-2xl">HomeHarmony</p>
       </Link>
 
-      <div className="md:hidden" onClick={() => { toggleMenu(""); }}>
+      <div
+        className="md:hidden"
+        onClick={() => {
+          toggleMenu("");
+        }}
+      >
         {isOpen ? <MdClose size={28} /> : <MdMenu size={28} />}
       </div>
 
@@ -29,19 +34,36 @@ const Navbar = () => {
           <p>Upload</p>
         </Link>
 
-        <p>Model</p>
+        <Link to="/model">
+          <p>Model</p>
+        </Link>
         <p>Settings</p>
       </div>
 
       {isOpen && (
         <div className="absolute top-full right-0 w-48 bg-[#1A1A1A] shadow-lg z-10 flex flex-col items-start py-4 px-8">
-          <p className="py-2 text-xl" onClick={() => { toggleMenu("upload"); }}>
+          <p
+            className="py-2 text-xl"
+            onClick={() => {
+              toggleMenu("upload");
+            }}
+          >
             Upload
           </p>
-          <p className="py-2 text-xl" onClick={() => { toggleMenu("model"); }}>
+          <p
+            className="py-2 text-xl"
+            onClick={() => {
+              toggleMenu("model");
+            }}
+          >
             Model
           </p>
-          <p className="py-2 text-xl" onClick={() => { toggleMenu("settings"); }}>
+          <p
+            className="py-2 text-xl"
+            onClick={() => {
+              toggleMenu("settings");
+            }}
+          >
             Settings
           </p>
         </div>
